@@ -1,0 +1,38 @@
+.card-title-wrapper {
+    background: linear-gradient(180deg, #F9F7F7 0%, rgba(249, 247, 247, 0) 100%);
+
+    .explore-text {
+        font-weight: 600;
+        font-size: 34px;
+    }
+
+    .see-all-text {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+/* responsive */
+@include media-breakpoint-down(xxl) {
+    // removing last card in smaller screen
+    .cards:nth-last-child(-n+1) {
+        display: none;
+    }
+}
+
+
+@include media-breakpoint-down(lg) {
+    // removing last card in smaller screen
+    .cards:nth-last-child(-n+1) {
+        display: none;
+    }
+    // change of carousel size for smaller screen
+    .carousel-wrapper {
+        .carousel-text-wrapper {
+            height: 100%;
+            width: 80%;
+        }
+    }
+
+}
+

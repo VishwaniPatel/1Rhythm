@@ -1,0 +1,26 @@
+.card {
+    box-shadow: 0px 0px 32px rgba(69, 69, 69, 0.12);
+}
+    .image-wrapper {
+        height: 220px;
+    }
+    .truncate-overflow {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        width: 100%;
+        overflow: hidden;
+    }
+    .card-text {
+        height: 48px;
+    }
+    .btn {
+        font-size: 16px;
+        height: 48px;
+        width: 100%;
+    }
+    .btn:hover {
+        color: #fff;
+    }
+   

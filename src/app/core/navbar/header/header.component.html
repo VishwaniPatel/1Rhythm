@@ -1,0 +1,83 @@
+<nav class="navbar bg-white w-100">
+    <div class="container-fluid header-wrapper">
+        <div class="d-flex justify-content-between align-items-center w-100">
+            <!-- brand logo -->
+            <a class="d-flex align-items-center logo">
+                <img src="../../../../assets/images/1rhythmlogo.png" alt="">
+                <span class="fs-4 fw-semibold text-dark ms-2 mb-0 logo-text ">1Rhythm</span>
+            </a>
+
+            <!-- navbar -->
+            <div class="menu d-md-flex d-xs-none">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-link d-flex align-items-center">
+                            <!-- <img src="../../../../assets/images/home.svg" alt="" class="me-2 header-icon"> -->
+                            <span class="bi bi-house-door me-2"></span>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="" class="nav-link d-flex align-items-center ">
+                            <!-- <img src="../../../../assets/images/Studio.svg" alt="" class="me-2 header-icon"> -->
+                            <span class="bi bi-vinyl me-2"></span>
+                            <span class="nav-text">Studio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="" class="nav-link d-flex align-items-center ">
+                            <!-- <img src="../../../../assets/images/artist.svg" alt="" class="me-2 header-icon"> -->
+                            <span class="bi bi-person me-2"></span>
+                            <span class="nav-text">Artists</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="" class="nav-link d-flex align-items-center ">
+                            <!-- <img src="../../../../assets/images/calender.svg" alt="" class="me-2 header-icon"> -->
+                            <span class="bi bi-calendar me-2"></span>
+                            <span class="nav-text">Booking History</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- profile -->
+            <div class="d-flex">
+                <div class="form-group has-search me-4 bg-light d-none">
+                    <span class="bi bi-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <div ngbDropdown display="dynamic" placement="bottom-end" class="d-inline-block">
+                    <!-- <button type="button" class="btn btn-outline-primary" >
+                        Toggle dropdown
+                    </button> -->
+                    <div class="rounded-circle image overflow-hidden " type="button" id="manageProfileDropdown"
+                        ngbDropdownToggle>
+                        <img src="../../../../assets/images/marco-bicca-Z8Rf8EVS2Wc-unsplash 1.png"
+                            class=" img-fluid image " alt="">
+                    </div>
+                    <div class="border-0 shadow-sm" ngbDropdownMenu aria-labelledby="manageProfileDropdown">
+                        <!-- <li class="item px-3 py-1">
+                            <div class="form-switch p-0 d-flex align-items-center justify-content-between">
+                                <label class="form-check-label cursor-pointer"
+                                    for="flexSwitchCheckDefault">Available</label>
+                                <input class="form-check-input m-0" type="checkbox" role="switch"
+                                    id="flexSwitchCheckDefault">
+                            </div>
+                        </li> -->
+                        <li class="item px-3 py-1">
+                            Manage Profile
+                        </li>
+
+                        <!-- <li class="item px-3 py-1 text-nowrap">
+                            Manage Studio Profile
+                        </li> -->
+                        <li class="item px-3 py-1">Log Out</li>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</nav>
