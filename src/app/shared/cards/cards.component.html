@@ -1,12 +1,17 @@
-<div class="card p-3">
+<!-- Comman card to display data of studio as well artist -->
+<div class="card p-3"> 
         <div class="image-wrapper rounded overflow-hidden d-flex align-items-center justify-content-center mb-2">
-            <img src="{{data.img}}" alt="..." class="h-100">
+            <!-- Displaying dynamic cover image -->
+            <img src="{{data.img}}" alt="No Image Found" class="h-100 w-100">
         </div>
         <div class="card-body p-0">
+            <!-- Artist/Studio name -->
             <h5 class="mb-1">{{data.eventLocation}}</h5>
+            <!-- Artist description/Studio address -->
             <p class="card-text mb-2 truncate-overflow">{{data.eventDescription}}
                 {{data.artistDescription}}</p>
-            <a href="#" class="btn btn-outline-secondary d-flex align-items-center justify-content-center">View
+                <!-- Button for view details of artist/studio -->
+            <a class="btn btn-outline-secondary d-flex align-items-center justify-content-center">View
                 Details</a>
         </div>
 </div>

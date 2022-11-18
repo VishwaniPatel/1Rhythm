@@ -1,102 +1,96 @@
+// Style of carousel
 .carousel-wrapper {
     border-radius: $carousel-border-radius;
+
     .picsum-img-wrapper {
         height: $carousel-img-height;
+
         img {
             object-fit: cover;
         }
     }
+}
 
-    .carousel-text-wrapper {
-        background: linear-gradient(to right, #0D0F14 55%, transparent);
-        border-radius: $carousel-border-radius;
-        .carousel-text {
-            margin: 53px 0 0 53px;
+// Style for text displayed on carousel
+.carousel-text-wrapper {
+    background: $carousel-background;
+    border-radius: $carousel-border-radius;
+    width: $carousel-content-width;
 
-            .crtext {
-                font-size: $carousel-font-size;
-                font-weight: bold;
-            }
+    .carousel-text {
+        margin: $carousel-wrapper-margin;
 
-            .truncate-overflow {
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                text-overflow: ellipsis;
-                -webkit-box-orient: vertical;
-                width: 100%;
-                overflow: hidden;
-            }
+        // Style for artist/studio name
+        .role-title {
+            font-size: $carousel-font-size;
+        }
 
-            .crtext-role {
-                font-size: $carousel-font-size;
-                font-weight: bold;
-                background: -webkit-linear-gradient(right, #2D6DD5, #35B5C8);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-stroke: 2.5px transparent;
-                color: #0D0F14;
-            }
+        // Display only two lines of text
+        .truncate-overflow {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            width: 100%;
+            overflow: hidden;
+        }
 
-            .btn {
-                width: 204px;
-                height: 50px;
-                margin-top: 40px;
-                background: linear-gradient(270.17deg, #2D6DD5 1.37%, #35B5C8 99.86%);
-            }
+        // Style fpr artist/studio type text 
+        .role-name {
+            font-size: $carousel-font-size;
+            background: -webkit-linear-gradient(right, #2D6DD5, #35B5C8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 2.5px transparent;
+            color: $dark;
         }
     }
 }
 
 @include media-breakpoint-down(md) {
-    .cards:nth-last-child(-n+3) {
+    .cards:nth-last-child(-n+4) {
         display: none;
     }
 
     .carousel-wrapper {
-        // height: 250px;
         margin: 0 30px;
 
         .picsum-img-wrapper {
             height: 250px
         }
-
-        .carousel-text-wrapper {
-            height: 100%;
-            width: 90%;
-
-            .carousel-text {
-
-                .truncate-overflow {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    text-overflow: ellipsis;
-                    -webkit-box-orient: vertical;
-                    width: 100%;
-                    overflow: hidden;
-                    font-size: 20px;
-
-                }
-
-                .crtext,
-                .crtext-role {
-                    font-size: 25px;
-                    font-weight: 400;
-                }
-
-                .btn {
-                    margin-top: 20px;
-                    width: 190px;
-                    height: 40px;
-                }
-            }
-        }
-
-
-
     }
 
+    .carousel-text-wrapper {
+        height: 100%;
+        width: 90%;
 
+        .carousel-text {
+            .truncate-overflow {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                width: 100%;
+                overflow: hidden;
+                font-size: 20px;
+            }
+
+            .role-title,
+            .role-name {
+                font-size: 25px;
+                font-weight: 400;
+            }
+
+            .btn {
+                margin-top: 20px;
+                width: 190px;
+                height: 40px;
+            }
+        }
+    }
 }
+
+
 
 @include media-breakpoint-down(sm) {
     .carousel-wrapper {
@@ -136,7 +130,6 @@
                 }
 
                 .btn {
-                    margin-top: 15px;
                     width: 180px;
                     height: 45px;
                 }

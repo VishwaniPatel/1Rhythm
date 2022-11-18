@@ -4,3 +4,9 @@ $dark:#0D0F14;
 $danger:#F03E3E;
 $gray:#ADB5BD;
 $gradient:linear-gradient(270.17deg, #2D6DD5 1.37%, #35B5C8 99.86%);
+
+$carousel-background: linear-gradient(to right, $dark 60%, transparent);
+
+$card-box-shadow: 0px 0px 32px rgba(69, 69, 69, 0.12);
+$white: #fff;
+$card-wrapper-background: linear-gradient(180deg, #F9F7F7 0%, rgba(249, 247, 247, 0) 100%);

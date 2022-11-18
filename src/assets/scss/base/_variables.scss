@@ -1,19 +1,12 @@
-$font-family-base : 'Inter',
-sans-serif;
+//fonts variables
+$font-family-sans-serif: 'Roboto', sans-serif;
 
-$link-decoration : none;
-
-$btn-font-family : 'Roboto',
-sans-serif;
-
-$nav-link-padding-x : 0px;
-$card-border-width: 0px;
-
-// variables used for carousel
-$carousel-border-radius: 14px;
-$carousel-img-height: 350px;
-$carousel-font-size: 36px;
-
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
 
 $container-max-widths: (
   sm: 540px,
@@ -23,3 +16,20 @@ $container-max-widths: (
   xxl: 1320px,
   xxxl: 1800px
 );
+
+$nav-link-padding-x : 0px;
+$card-border-width: 0px;
+
+// variables used for carousel
+$carousel-border-radius: 14px;
+$carousel-img-height: 350px;
+$carousel-font-size: 36px;
+$carousel-wrapper-margin: 53px 0 0 53px;
+$carousel-content-width:60%;
+
+// variables used for card
+$card-img-height: 220px;
+$card-description-height: 48px;
+
+
+

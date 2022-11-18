@@ -1,53 +1,54 @@
+<!-- Main section of home starts here -->
 <section class="bg-white pb-4">
     <div class="container">
         <div class="row gx-0">
+            <!-- Carousel starts here -->
             <ngb-carousel class="col carousel-wrapper overflow-hidden" [showNavigationArrows]="false">
+                <!-- Displaying dynamic data using iteration -->
                 <ng-template ngbSlide *ngFor="let event of mergeImage">
+                    <!-- Adding background image of caousel -->
                     <div class="picsum-img-wrapper position-relative">
-                        <img class="w-100 img-fluid h-100" src="{{event.img}}" alt="Random first slide" />
+                        <img class="w-100 img-fluid h-100" src="{{event.img}}" alt="No Image Found" />
                     </div>
-                    <div class="carousel-text-wrapper w-60 position-absolute top-0 h-100">
+                    <!-- Text to display on caousel -->
+                    <div class="carousel-text-wrapper position-absolute top-0 h-100">
                         <div class="carousel-text text-white">
                             <h5>MOST POPULAR</h5>
-                            <span class="text-white crtext">{{event.eventLocation + " "}}</span> <span
-                                class="text-white crtext-role">STUDIO</span>
-                            <h4 class="truncate-overflow description">Lorem ipsum dolor, sit amet
-                                consectetur
-                                adipisicing
-                                elit.
-                                Distinctio minima dolorem
-                                ullam,
-                                officiis quibusdam libero magnam adipisci. Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Quibusdam explicabo ullam quam facilis eius, pariatur, ipsum
-                                repudiandae minus, inventore eligendi eos assumenda sint voluptatum tempore. Aliquid
-                                dignissimos laudantium autem maxime.</h4>
-                            <a href="#" class="btn btn-primary d-flex align-items-center justify-content-center">View
+                            <!-- Name of artist or studio -->
+                            <span class="text-white role-title fw-bold">{{event.eventLocation + " "}}</span> <span
+                                class="role-name fw-bold">STUDIO</span>
+                            <h4 class="truncate-overflow description">{{event.eventDescription}} {{event.artistDescription}}</h4>
+                                <!-- Button to view more details of artist or studio -->
+                            <a class="btn btn-primary py-2 px-4 my-4">View
                                 Details</a>
                         </div>
                     </div>
                 </ng-template>
             </ngb-carousel>
+            <!-- End of carousel -->
         </div>
     </div>
 </section>
 
-<!-- Explore Studio -->
-<section class="card-title-wrapper pt-4">
+<!-- Explore studio starts here-->
+<section class="card-title-wrapper pt-4 pb-5">
     <div class="container">
         <div class=" d-flex justify-content-between align-items-center pb-4">
             <span class="explore-text text-nowrap">Explore Studio</span>
-            <span class="see-all-text text-primary text-nowrap">SEE ALL</span>
+            <span class="see-all-text text-primary text-nowrap fs-6" >SEE ALL</span>
         </div>
 
         <div class="row justify-content-between">
-            <div class="col-xxl-2 col-xl-3 col-md-6 col-xs-12 cards pb-4" *ngFor="let studio of studioFiveData">
+            <!-- Displaying studio data on cards dynamically for different size of screens -->
+            <div class="col-xxl-2 col-xl-3 col-md-4 col-sm-6 col-xs-12 cards" *ngFor="let studio of studioFiveData">
                 <app-cards [data]="studio"> </app-cards>
             </div>
         </div>
     </div>
 </section>
+<!-- End of explore studio section -->
 
-<!-- Explore Artist -->
+<!-- Explore artist starts here -->
 <div class="card-title-wrapper pt-4">
     <div class="container">
     <div class="d-flex justify-content-between align-items-center pb-4">
@@ -56,9 +57,12 @@
     </div>
 
     <div class="row justify-content-between">
-        <div class="col-xxl-2 col-xl-3 col-md-6 col-xs-12 cards pb-4" *ngFor="let artist of artistFiveData">
+        <!-- Displaying artist data on cards dynamically for different size of screens -->
+        <div class="col-xxl-2 col-xl-3 col-md-4 col-sm-6 col-xs-12 cards cards pb-4" *ngFor="let artist of artistFiveData">
             <app-cards [data]="artist"></app-cards>
         </div>
     </div>
 </div>
 </div>
+<!-- End of explore artist section -->
+<!-- End of main section -->

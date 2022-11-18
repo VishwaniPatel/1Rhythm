@@ -1,9 +1,11 @@
 .card {
-    box-shadow: 0px 0px 32px rgba(69, 69, 69, 0.12);
+    box-shadow: $card-box-shadow;
 }
     .image-wrapper {
-        height: 220px;
+        height: $card-img-height;
+        object-fit: cover;
     }
+    // adding font-style of role title
     .truncate-overflow {
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -13,14 +15,9 @@
         overflow: hidden;
     }
     .card-text {
-        height: 48px;
-    }
-    .btn {
-        font-size: 16px;
-        height: 48px;
-        width: 100%;
+        height: $card-description-height;
     }
     .btn:hover {
-        color: #fff;
+        color: $white;
     }
    

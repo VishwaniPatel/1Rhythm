@@ -1,31 +1,33 @@
+// Styles for card wrapper(Explore artist/Expolre Studio)
 .card-title-wrapper {
-    background: linear-gradient(180deg, #F9F7F7 0%, rgba(249, 247, 247, 0) 100%);
+    background: $card-wrapper-background;
 
     .explore-text {
-        font-weight: 600;
+        font-weight: $font-weight-medium;
         font-size: 34px;
     }
 
     .see-all-text {
         font-size: 14px;
-        font-weight: 600;
+        font-weight: $font-weight-semibold;
     }
 }
 
 /* responsive */
 @include media-breakpoint-down(xxl) {
     // removing last card in smaller screen
-    .cards:nth-last-child(-n+1) {
+    .cards:nth-last-child(-n+2) {
+        display: none;
+    }
+}
+@include media-breakpoint-down(xl) {
+    // removing last card in smaller screen
+    .cards:nth-last-child(-n+3) {
         display: none;
     }
 }
 
-
 @include media-breakpoint-down(lg) {
-    // removing last card in smaller screen
-    .cards:nth-last-child(-n+1) {
-        display: none;
-    }
     // change of carousel size for smaller screen
     .carousel-wrapper {
         .carousel-text-wrapper {
